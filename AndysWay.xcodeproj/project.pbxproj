@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		031CC1392CA7066F0081D132 /* AndysWayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CC1382CA7066F0081D132 /* AndysWayApp.swift */; };
-		031CC13B2CA7066F0081D132 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CC13A2CA7066F0081D132 /* ContentView.swift */; };
+		031CC13B2CA7066F0081D132 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CC13A2CA7066F0081D132 /* LoginView.swift */; };
 		031CC13D2CA7066F0081D132 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CC13C2CA7066F0081D132 /* Item.swift */; };
 		031CC13F2CA706700081D132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031CC13E2CA706700081D132 /* Assets.xcassets */; };
 		031CC1432CA706700081D132 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031CC1422CA706700081D132 /* Preview Assets.xcassets */; };
 		031CC14D2CA706700081D132 /* AndysWayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CC14C2CA706700081D132 /* AndysWayTests.swift */; };
 		031CC1572CA706700081D132 /* AndysWayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CC1562CA706700081D132 /* AndysWayUITests.swift */; };
 		031CC1592CA706700081D132 /* AndysWayUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CC1582CA706700081D132 /* AndysWayUITestsLaunchTests.swift */; };
+		034C662C2CAD805A0051B8E9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 034C662B2CAD805A0051B8E9 /* Colors.xcassets */; };
+		034C662F2CAD84470051B8E9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 034C662E2CAD84470051B8E9 /* Images.xcassets */; };
+		034C66312CAD8CBF0051B8E9 /* ResourceEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034C66302CAD8CBF0051B8E9 /* ResourceEndPoint.swift */; };
+		034C66332CAD8E240051B8E9 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034C66322CAD8E240051B8E9 /* Environment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +41,7 @@
 /* Begin PBXFileReference section */
 		031CC1352CA7066F0081D132 /* AndysWay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AndysWay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		031CC1382CA7066F0081D132 /* AndysWayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndysWayApp.swift; sourceTree = "<group>"; };
-		031CC13A2CA7066F0081D132 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		031CC13A2CA7066F0081D132 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		031CC13C2CA7066F0081D132 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		031CC13E2CA706700081D132 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		031CC1402CA706700081D132 /* AndysWay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AndysWay.entitlements; sourceTree = "<group>"; };
@@ -47,6 +51,10 @@
 		031CC1522CA706700081D132 /* AndysWayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AndysWayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		031CC1562CA706700081D132 /* AndysWayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndysWayUITests.swift; sourceTree = "<group>"; };
 		031CC1582CA706700081D132 /* AndysWayUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndysWayUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		034C662B2CAD805A0051B8E9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		034C662E2CAD84470051B8E9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		034C66302CAD8CBF0051B8E9 /* ResourceEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceEndPoint.swift; sourceTree = "<group>"; };
+		034C66322CAD8E240051B8E9 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +105,13 @@
 		031CC1372CA7066F0081D132 /* AndysWay */ = {
 			isa = PBXGroup;
 			children = (
+				034C662D2CAD84350051B8E9 /* Assets */,
+				034C662A2CAD7F7A0051B8E9 /* Helpers */,
+				034C66292CAD79E20051B8E9 /* Model */,
+				034C66282CAD79DA0051B8E9 /* Views */,
+				034C66272CAD79CB0051B8E9 /* Network */,
 				031CC1382CA7066F0081D132 /* AndysWayApp.swift */,
-				031CC13A2CA7066F0081D132 /* ContentView.swift */,
+				031CC13A2CA7066F0081D132 /* LoginView.swift */,
 				031CC13C2CA7066F0081D132 /* Item.swift */,
 				031CC13E2CA706700081D132 /* Assets.xcassets */,
 				031CC1402CA706700081D132 /* AndysWay.entitlements */,
@@ -130,6 +143,45 @@
 				031CC1582CA706700081D132 /* AndysWayUITestsLaunchTests.swift */,
 			);
 			path = AndysWayUITests;
+			sourceTree = "<group>";
+		};
+		034C66272CAD79CB0051B8E9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				034C66322CAD8E240051B8E9 /* Environment.swift */,
+				034C66302CAD8CBF0051B8E9 /* ResourceEndPoint.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		034C66282CAD79DA0051B8E9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		034C66292CAD79E20051B8E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		034C662A2CAD7F7A0051B8E9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		034C662D2CAD84350051B8E9 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				034C662B2CAD805A0051B8E9 /* Colors.xcassets */,
+				034C662E2CAD84470051B8E9 /* Images.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +288,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				034C662C2CAD805A0051B8E9 /* Colors.xcassets in Resources */,
+				034C662F2CAD84470051B8E9 /* Images.xcassets in Resources */,
 				031CC1432CA706700081D132 /* Preview Assets.xcassets in Resources */,
 				031CC13F2CA706700081D132 /* Assets.xcassets in Resources */,
 			);
@@ -262,9 +316,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				031CC13B2CA7066F0081D132 /* ContentView.swift in Sources */,
+				031CC13B2CA7066F0081D132 /* LoginView.swift in Sources */,
 				031CC13D2CA7066F0081D132 /* Item.swift in Sources */,
+				034C66312CAD8CBF0051B8E9 /* ResourceEndPoint.swift in Sources */,
 				031CC1392CA7066F0081D132 /* AndysWayApp.swift in Sources */,
+				034C66332CAD8E240051B8E9 /* Environment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,7 +502,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.haberdashery1234.AndysWay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -484,7 +541,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.haberdashery1234.AndysWay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
