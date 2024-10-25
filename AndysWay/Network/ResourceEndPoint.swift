@@ -7,30 +7,19 @@
 
 import Foundation
 
+//Create a protocol representing a REST end point and all possible functions
+
+enum HTTPMethod: String {
+    case GET, POST, PUT
+}
+
 protocol ResourceEndPoint {
-    // Path of end point
-    var path: String { get }
+    associatedtype Response: Decodable
     
-    func GET()
-    func POST()
-    func PUT()
-    func DELETE()
+    static var path: String { get }
+    static var availableHTTPMethods: [HTTPMethod] { get }
 }
 
 extension ResourceEndPoint {
-    func GET() {
-        
-    }
-    
-    func POST() {
-        
-    }
-    
-    func PUT() {
-        
-    }
-    
-    func DELETE() {
-        
-    }
+
 }
