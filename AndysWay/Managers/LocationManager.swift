@@ -15,6 +15,8 @@ final class LocationManager: NSObject, ObservableObject {
     
     @Published var region = MKCoordinateRegion()
     
+    @Published var userLocation: CLLocation?
+    
     override init() {
         super.init()
         
@@ -37,6 +39,12 @@ final class LocationManager: NSObject, ObservableObject {
             break
         }
     }
+    
+    func getCurrentLocation() {
+        guard .authorizedWhenInUse == locationManager.authorizationStatus else { return }
+        locationManager.startUpdatingLocation()
+        locationManager.requestLocation()
+    }
 }
 
 extension LocationManager: CLLocationManagerDelegate {
@@ -46,8 +54,10 @@ extension LocationManager: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print("Location updated: \(String(describing: locations.last?.coordinate))")
         locationManager.stopUpdatingLocation()
         locations.last.map {
+            userLocation = $0
             region = MKCoordinateRegion(center: $0.coordinate, span: .init(latitudeDelta: 0.01, longitudeDelta: 0.01))
         }
     }

@@ -16,54 +16,87 @@ struct MapView: View {
     
     @State var isAddMarkerPopoverPresented = false
     
-    var body: some View {
-        Map(
-            coordinateRegion: $locationManager.region,
-            showsUserLocation: true,
-            annotationItems: model.markers) { marker in
-                mark(for: marker)
-            }
-            .popover(isPresented: $isAddMarkerPopoverPresented) {
-                markerTypes
-            }
-            .task {
-                refreshMarkers()
-            }
-    }
+    @State private var gridColumns = Array(repeating: GridItem(.flexible()), count: 1)
     
-    var markerTypes: some View {
-        VStack(alignment: .leading) {
-            Text("Add a marker")
-                .font(.title3)
-                .padding(.horizontal)
-            
-            Divider()
-            
-//            ScrollView {
-//                LazyVGrid(columns: [GridItem(.adaptive(minimum: 44), spacing: 10)]) {
-//                    ForEach(MarkerType.) { index in
-//                        Text("\(index)")
-//                    }
-//                }.padding()
-//            }
+    @State var selectedAddMarkerType: MyMarkerType? = nil
+    
+    var body: some View {
+        NavigationStack {
+            Map(
+                coordinateRegion: $locationManager.region,
+                showsUserLocation: true,
+                annotationItems: model.markers) { marker in
+                    mark(for: marker)
+                }
+                .task {
+                    refreshMarkers()
+                }
+                .dropDestination(for: MyMarker.self) { items, location in
+                    let marker = items[0]
+//                    marker.latitude = location.x //CONVERT TO MAP LATITUDE
+//                    marker.longitude = location.y //CONVERT TO MAP LONGITUDE
+                    model.markers.append(items[0])
+                    print("Dropped \(marker) at \(location)")
+                    return true
+                }
         }
-        .padding(.vertical)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button(action: {
+                    self.isAddMarkerPopoverPresented = true
+                }) {
+                    Label("Filter", systemImage: "plus")
+                }.popover(isPresented: $isAddMarkerPopoverPresented) {
+                    AddMarkerView(selectedAddMarkerType: $selectedAddMarkerType, addMarkerFunction: self.addMarker)
+                }
+            }
+        }
     }
     
     func refreshMarkers() {
+        gridColumns.last
         model.fetchMapMarkers() { _ in
+            print("Markers refreshed")
         }
     }
     
-    func mark(for marker: Marker) -> MapAnnotation {
+    func addMarker(_ marker: MyMarker) {
+        var myMarker = marker
+        locationManager.getCurrentLocation()
+        if let userLocation = locationManager.userLocation {
+            myMarker.latitude = userLocation.coordinate.latitude
+            myMarker.longitude = userLocation.coordinate.longitude
+            print("Add \(selectedAddMarkerType!.rawValue) marker at (\(String(describing: myMarker.latitude)), \(String(describing: myMarker.longitude)))")
+            model.addMarker(myMarker) { _ in 
+                refreshMarkers()
+            }
+        }
+    }
+    
+    func mark(for marker: MyMarker) -> some MapAnnotationProtocol {
+        let coordinate = CLLocationCoordinate2D(latitude: marker.latitude ?? 0, longitude: marker.longitude ?? 0)
+        print("Marking \(marker) at \(coordinate)")
+        
         switch marker.type {
-        case "water":
-            return AnyMapAnnotationProtocol(MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: marker.latitude, longitude: marker.longitude))) {
-                Image("drop")
+        case .water:
+            return MapAnnotation(coordinate: coordinate) {
+                Image(systemName: "drop.fill")
+            }
+        case .trash:
+            return MapAnnotation(coordinate: coordinate) {
+                Image(systemName: "trash.fill")
+            }
+        case .light:
+            return MapAnnotation(coordinate: coordinate) {
+                Image(systemName: "lightbulb.fill")
+            }
+        case .attack:
+            return MapAnnotation(coordinate: coordinate) {
+                Image(systemName: "exclamationmark.triangle.fill")
             }
         default:
-            return AnyMapAnnotationProtocol(MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: marker.latitude, longitude: marker.longitude))) {
-                Image("circle")
+            return MapAnnotation(coordinate: coordinate) {
+                Image(systemName: "circle.fill")
             }
         }
     }

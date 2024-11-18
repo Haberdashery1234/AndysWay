@@ -16,6 +16,8 @@
 		031CC1592CA706700081D132 /* AndysWayUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CC1582CA706700081D132 /* AndysWayUITestsLaunchTests.swift */; };
 		034C66312CAD8CBF0051B8E9 /* ResourceEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034C66302CAD8CBF0051B8E9 /* ResourceEndPoint.swift */; };
 		034C66332CAD8E240051B8E9 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034C66322CAD8E240051B8E9 /* Environment.swift */; };
+		03B27CA12CD00FA20004DA73 /* MarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B27CA02CD00F9C0004DA73 /* MarkerView.swift */; };
+		03B27CA32CD07F920004DA73 /* AddMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B27CA22CD07F8F0004DA73 /* AddMarkerView.swift */; };
 		03E897982CADB31100403E52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E897972CADB31100403E52 /* AppDelegate.swift */; };
 		03E8979F2CADC2A600403E52 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E8979E2CADC2A100403E52 /* LoginViewModel.swift */; };
 		03E897A12CADC2F000403E52 /* LoginEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E897A02CADC2E700403E52 /* LoginEndPoint.swift */; };
@@ -30,7 +32,7 @@
 		03F55B2F2CCC18DF00674DEF /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F55B2E2CCC18DF00674DEF /* ProfileViewModel.swift */; };
 		03F55B312CCC1C4B00674DEF /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F55B302CCC1C4000674DEF /* NetworkErrors.swift */; };
 		03F55B332CCC1C9000674DEF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F55B322CCC1C8C00674DEF /* User.swift */; };
-		03F55B352CCC1CA300674DEF /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F55B342CCC1CA300674DEF /* Marker.swift */; };
+		03F55B352CCC1CA300674DEF /* MyMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F55B342CCC1CA300674DEF /* MyMarker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		031CC1582CA706700081D132 /* AndysWayUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndysWayUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		034C66302CAD8CBF0051B8E9 /* ResourceEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceEndPoint.swift; sourceTree = "<group>"; };
 		034C66322CAD8E240051B8E9 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		03B27CA02CD00F9C0004DA73 /* MarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerView.swift; sourceTree = "<group>"; };
+		03B27CA22CD07F8F0004DA73 /* AddMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMarkerView.swift; sourceTree = "<group>"; };
 		03E897972CADB31100403E52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03E8979E2CADC2A100403E52 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		03E897A02CADC2E700403E52 /* LoginEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEndPoint.swift; sourceTree = "<group>"; };
@@ -78,7 +82,7 @@
 		03F55B2E2CCC18DF00674DEF /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		03F55B302CCC1C4000674DEF /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
 		03F55B322CCC1C8C00674DEF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		03F55B342CCC1CA300674DEF /* Marker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
+		03F55B342CCC1CA300674DEF /* MyMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMarker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +188,8 @@
 		034C66282CAD79DA0051B8E9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				03B27CA22CD07F8F0004DA73 /* AddMarkerView.swift */,
+				03B27CA02CD00F9C0004DA73 /* MarkerView.swift */,
 				03F55A892CCADDEF00674DEF /* HomeView.swift */,
 				031CC13A2CA7066F0081D132 /* LoginView.swift */,
 				03F55A8B2CCADFB700674DEF /* MapView.swift */,
@@ -197,7 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				03F55B322CCC1C8C00674DEF /* User.swift */,
-				03F55B342CCC1CA300674DEF /* Marker.swift */,
+				03F55B342CCC1CA300674DEF /* MyMarker.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -369,11 +375,13 @@
 				03F55A8A2CCADDF200674DEF /* HomeView.swift in Sources */,
 				03E897982CADB31100403E52 /* AppDelegate.swift in Sources */,
 				031CC13B2CA7066F0081D132 /* LoginView.swift in Sources */,
-				03F55B352CCC1CA300674DEF /* Marker.swift in Sources */,
+				03F55B352CCC1CA300674DEF /* MyMarker.swift in Sources */,
 				03F55A882CCADC2A00674DEF /* TabBarView.swift in Sources */,
 				034C66312CAD8CBF0051B8E9 /* ResourceEndPoint.swift in Sources */,
 				031CC1392CA7066F0081D132 /* AndysWayApp.swift in Sources */,
+				03B27CA32CD07F920004DA73 /* AddMarkerView.swift in Sources */,
 				03F55B312CCC1C4B00674DEF /* NetworkErrors.swift in Sources */,
+				03B27CA12CD00FA20004DA73 /* MarkerView.swift in Sources */,
 				03F55AF72CCC143600674DEF /* MarkersEndPoint.swift in Sources */,
 				034C66332CAD8E240051B8E9 /* Environment.swift in Sources */,
 				03F55A8C2CCADFBA00674DEF /* MapView.swift in Sources */,
