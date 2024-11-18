@@ -9,39 +9,28 @@ import Foundation
 
 class MapViewModel: ObservableObject {
     @Published var markers: [MyMarker] = []
-    var filteredMarkerTypes: [MyMarker] {
-        if selectedMarkerTypes.isEmpty {
-            return markers
-        } else {
-            return markers.filter( { selectedMarkerTypes.contains($0.type.rawValue) })
-        }
-    }
+    @Published var filteredMarkers: [MyMarker] = []
     
-    @Published var markerTypes: [String] = []
-    @Published var selectedMarkerTypes: [String] = []
+    var markerTypes = MyMarkerType.allCases
+    @Published var selectedFilterMarkerTypes: [MyMarkerType] = []
     
     private let session = URLSession(configuration: .default)
     
     func clearSelectedMarkerTypes() {
-        selectedMarkerTypes.removeAll()
-        selectedMarkerTypes.append(contentsOf: markerTypes)
-    }
-    
-    func toggleSelectedCuisine(_ markerType: String) {
-        if selectedMarkerTypes.contains(markerType) {
-            selectedMarkerTypes.removeAll(where: { $0 == markerType })
-        } else {
-            selectedMarkerTypes.append(markerType)
-        }
+        selectedFilterMarkerTypes.removeAll()
+        selectedFilterMarkerTypes.append(contentsOf: markerTypes)
     }
     
     func fetchMapMarkers(completion: @escaping (Result<[MyMarker], Error>) -> Void) {
         MarkersEndPoint.fetchMarkers() { result in
             switch result {
             case .success(let response):
-                self.markers = response//.markers
-                print("Successfully fetched map markers: \(response.count)")
-                completion(.success(self.markers))
+                DispatchQueue.main.async {
+                    self.markers = response//.markers
+                    self.filterMarkers()
+                    print("Successfully fetched map markers: \(response.count)")
+                    completion(.success(self.markers))
+                }
             case .failure(let error):
                 print("Error fetching map markers: \(error)")
                 completion(.failure(error))
@@ -56,9 +45,17 @@ class MapViewModel: ObservableObject {
                 print("Successfully added marker: \(marker)")
                 completion(.success(marker))
             case .failure(let error):
-                print("Error adding marker: \(marker)")
+                print("Error adding marker: \(error)")
                 completion(.failure(error))
             }
+        }
+    }
+    
+    func filterMarkers() {
+        if selectedFilterMarkerTypes.isEmpty {
+            filteredMarkers = markers
+        } else {
+            filteredMarkers = markers.filter( { selectedFilterMarkerTypes.contains($0.type) })
         }
     }
 }

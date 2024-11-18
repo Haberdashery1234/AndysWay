@@ -54,11 +54,11 @@ extension LocationManager: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("Location updated: \(String(describing: locations.last?.coordinate))")
+        print("Location updated: \(locations.last!.coordinate)")
         locationManager.stopUpdatingLocation()
         locations.last.map {
             userLocation = $0
-            region = MKCoordinateRegion(center: $0.coordinate, span: .init(latitudeDelta: 0.01, longitudeDelta: 0.01))
+            region = MKCoordinateRegion(center: $0.coordinate, span: .init(latitudeDelta: 0.005, longitudeDelta: 0.005))
         }
     }
     

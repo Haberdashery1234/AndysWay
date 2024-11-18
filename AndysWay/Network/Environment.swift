@@ -15,7 +15,7 @@ public enum EnvironmentType {
     
     var url: URL {
         switch self {
-        case .development: return URL(string: "http://localhost:3000")!
+        case .development: return URL(string: "http://localhost:8080")!
         case .staging: return URL(string: "https://staging.api.example.com")!
         case .production: return URL(string: "https://production.api.example.com")!
         }

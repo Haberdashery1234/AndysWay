@@ -85,7 +85,7 @@ struct LoginView: View {
                 }
             }
             .background(
-                LinearGradient(gradient: Gradient(colors: [Color(.primary), Color(.green)]), startPoint: .top, endPoint: .bottom)
+                LinearGradient(gradient: Gradient(colors: [Color(.main), Color(.green)]), startPoint: .top, endPoint: .bottom)
                     .edgesIgnoringSafeArea(.all))
         } else {
             TabBarView()

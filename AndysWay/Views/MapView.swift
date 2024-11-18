@@ -15,6 +15,7 @@ struct MapView: View {
     @StateObject var locationManager = LocationManager()
     
     @State var isAddMarkerPopoverPresented = false
+    @State var isFilterMarkersPopoverPresented = false
     
     @State private var gridColumns = Array(repeating: GridItem(.flexible()), count: 1)
     
@@ -25,7 +26,7 @@ struct MapView: View {
             Map(
                 coordinateRegion: $locationManager.region,
                 showsUserLocation: true,
-                annotationItems: model.markers) { marker in
+                annotationItems: model.filteredMarkers) { marker in
                     mark(for: marker)
                 }
                 .task {
@@ -43,6 +44,15 @@ struct MapView: View {
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button(action: {
+                    self.isFilterMarkersPopoverPresented = true
+                }) {
+                    Label("Filter", systemImage: "line.3.horizontal.decrease")
+                }.popover(isPresented: $isFilterMarkersPopoverPresented) {
+                    FilterMarkersView(selectedFilterMarkerTypes: $model.selectedFilterMarkerTypes, filterMarkersFunction: self.filterMarkers)
+                }
+            }
+            ToolbarItem(placement: .topBarTrailing) {
+                Button(action: {
                     self.isAddMarkerPopoverPresented = true
                 }) {
                     Label("Filter", systemImage: "plus")
@@ -53,8 +63,7 @@ struct MapView: View {
         }
     }
     
-    func refreshMarkers() {
-        gridColumns.last
+    func refreshMarkers() { 
         model.fetchMapMarkers() { _ in
             print("Markers refreshed")
         }
@@ -73,10 +82,13 @@ struct MapView: View {
         }
     }
     
+    func filterMarkers(_ markerTypes: [MyMarkerType]) {
+        model.selectedFilterMarkerTypes = markerTypes
+    }
+    
     func mark(for marker: MyMarker) -> some MapAnnotationProtocol {
         let coordinate = CLLocationCoordinate2D(latitude: marker.latitude ?? 0, longitude: marker.longitude ?? 0)
-        print("Marking \(marker) at \(coordinate)")
-        
+        print("Marker: \(marker.id!) - \(marker.type.rawValue)")
         switch marker.type {
         case .water:
             return MapAnnotation(coordinate: coordinate) {
@@ -93,10 +105,6 @@ struct MapView: View {
         case .attack:
             return MapAnnotation(coordinate: coordinate) {
                 Image(systemName: "exclamationmark.triangle.fill")
-            }
-        default:
-            return MapAnnotation(coordinate: coordinate) {
-                Image(systemName: "circle.fill")
             }
         }
     }

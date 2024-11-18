@@ -34,8 +34,8 @@ struct MarkersEndPoint: ResourceEndPoint {
             }
             
             do {
-                let markers = try JSONDecoder().decode([MyMarker].self, from: data)
-                completion(.success(markers))
+                let markers = try? JSONDecoder().decode([MyMarker].self, from: data)
+                completion(.success(markers ?? []))
             } catch {
                 completion(.failure(error))
             }
@@ -50,6 +50,7 @@ struct MarkersEndPoint: ResourceEndPoint {
         }
         var request = URLRequest(url: url)
         request.httpMethod = HTTPMethod.POST.rawValue
+        request.httpBody = marker.toJSONData()
         URLSession.shared.dataTask(with: request) { data, _, error in
             if let error = error {
                 completion(.failure(error))
@@ -67,6 +68,6 @@ struct MarkersEndPoint: ResourceEndPoint {
             } catch {
                 completion(.failure(error))
             }
-        }
+        }.resume()
     }
 }
