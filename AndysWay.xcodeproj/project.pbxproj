@@ -8,13 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		031CC1392CA7066F0081D132 /* AndysWayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CC1382CA7066F0081D132 /* AndysWayApp.swift */; };
-		031CC13B2CA7066F0081D132 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CC13A2CA7066F0081D132 /* ContentView.swift */; };
-		031CC13D2CA7066F0081D132 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CC13C2CA7066F0081D132 /* Item.swift */; };
+		031CC13B2CA7066F0081D132 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CC13A2CA7066F0081D132 /* LoginView.swift */; };
 		031CC13F2CA706700081D132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031CC13E2CA706700081D132 /* Assets.xcassets */; };
 		031CC1432CA706700081D132 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031CC1422CA706700081D132 /* Preview Assets.xcassets */; };
 		031CC14D2CA706700081D132 /* AndysWayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CC14C2CA706700081D132 /* AndysWayTests.swift */; };
 		031CC1572CA706700081D132 /* AndysWayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CC1562CA706700081D132 /* AndysWayUITests.swift */; };
 		031CC1592CA706700081D132 /* AndysWayUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CC1582CA706700081D132 /* AndysWayUITestsLaunchTests.swift */; };
+		034C66312CAD8CBF0051B8E9 /* ResourceEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034C66302CAD8CBF0051B8E9 /* ResourceEndPoint.swift */; };
+		034C66332CAD8E240051B8E9 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034C66322CAD8E240051B8E9 /* Environment.swift */; };
+		036269272CEBE5CD005AD3F1 /* FilterMarkersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036269262CEBE5CD005AD3F1 /* FilterMarkersView.swift */; };
+		03B27CA12CD00FA20004DA73 /* MarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B27CA02CD00F9C0004DA73 /* MarkerView.swift */; };
+		03B27CA32CD07F920004DA73 /* AddMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B27CA22CD07F8F0004DA73 /* AddMarkerView.swift */; };
+		03E897982CADB31100403E52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E897972CADB31100403E52 /* AppDelegate.swift */; };
+		03E8979F2CADC2A600403E52 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E8979E2CADC2A100403E52 /* LoginViewModel.swift */; };
+		03E897A12CADC2F000403E52 /* LoginEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E897A02CADC2E700403E52 /* LoginEndPoint.swift */; };
+		03F55A882CCADC2A00674DEF /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F55A872CCADBF400674DEF /* TabBarView.swift */; };
+		03F55A8A2CCADDF200674DEF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F55A892CCADDEF00674DEF /* HomeView.swift */; };
+		03F55A8C2CCADFBA00674DEF /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F55A8B2CCADFB700674DEF /* MapView.swift */; };
+		03F55A8E2CCADFE300674DEF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F55A8D2CCADFE000674DEF /* ProfileView.swift */; };
+		03F55AF52CCBE39200674DEF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F55AF42CCBE39200674DEF /* LocationManager.swift */; };
+		03F55AF72CCC143600674DEF /* MarkersEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F55AF62CCC143600674DEF /* MarkersEndPoint.swift */; };
+		03F55AF92CCC161100674DEF /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F55AF82CCC161100674DEF /* MapViewModel.swift */; };
+		03F55B2D2CCC18D600674DEF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F55B2C2CCC18D200674DEF /* HomeViewModel.swift */; };
+		03F55B2F2CCC18DF00674DEF /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F55B2E2CCC18DF00674DEF /* ProfileViewModel.swift */; };
+		03F55B312CCC1C4B00674DEF /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F55B302CCC1C4000674DEF /* NetworkErrors.swift */; };
+		03F55B332CCC1C9000674DEF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F55B322CCC1C8C00674DEF /* User.swift */; };
+		03F55B352CCC1CA300674DEF /* MyMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F55B342CCC1CA300674DEF /* MyMarker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +56,7 @@
 /* Begin PBXFileReference section */
 		031CC1352CA7066F0081D132 /* AndysWay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AndysWay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		031CC1382CA7066F0081D132 /* AndysWayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndysWayApp.swift; sourceTree = "<group>"; };
-		031CC13A2CA7066F0081D132 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		031CC13C2CA7066F0081D132 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		031CC13A2CA7066F0081D132 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		031CC13E2CA706700081D132 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		031CC1402CA706700081D132 /* AndysWay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AndysWay.entitlements; sourceTree = "<group>"; };
 		031CC1422CA706700081D132 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -47,6 +65,26 @@
 		031CC1522CA706700081D132 /* AndysWayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AndysWayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		031CC1562CA706700081D132 /* AndysWayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndysWayUITests.swift; sourceTree = "<group>"; };
 		031CC1582CA706700081D132 /* AndysWayUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndysWayUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		034C66302CAD8CBF0051B8E9 /* ResourceEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceEndPoint.swift; sourceTree = "<group>"; };
+		034C66322CAD8E240051B8E9 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		036269262CEBE5CD005AD3F1 /* FilterMarkersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterMarkersView.swift; sourceTree = "<group>"; };
+		03B27CA02CD00F9C0004DA73 /* MarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerView.swift; sourceTree = "<group>"; };
+		03B27CA22CD07F8F0004DA73 /* AddMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMarkerView.swift; sourceTree = "<group>"; };
+		03E897972CADB31100403E52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		03E8979E2CADC2A100403E52 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		03E897A02CADC2E700403E52 /* LoginEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEndPoint.swift; sourceTree = "<group>"; };
+		03F55A872CCADBF400674DEF /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		03F55A892CCADDEF00674DEF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		03F55A8B2CCADFB700674DEF /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		03F55A8D2CCADFE000674DEF /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		03F55AF42CCBE39200674DEF /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		03F55AF62CCC143600674DEF /* MarkersEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkersEndPoint.swift; sourceTree = "<group>"; };
+		03F55AF82CCC161100674DEF /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		03F55B2C2CCC18D200674DEF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		03F55B2E2CCC18DF00674DEF /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		03F55B302CCC1C4000674DEF /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		03F55B322CCC1C8C00674DEF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		03F55B342CCC1CA300674DEF /* MyMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMarker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,10 +135,15 @@
 		031CC1372CA7066F0081D132 /* AndysWay */ = {
 			isa = PBXGroup;
 			children = (
+				034C662D2CAD84350051B8E9 /* Assets */,
+				034C662A2CAD7F7A0051B8E9 /* Helpers */,
+				03F55AF32CCBE37800674DEF /* Managers */,
+				034C66292CAD79E20051B8E9 /* Model */,
+				034C66282CAD79DA0051B8E9 /* Views */,
+				03E8979A2CADB91300403E52 /* ViewModels */,
+				034C66272CAD79CB0051B8E9 /* Network */,
 				031CC1382CA7066F0081D132 /* AndysWayApp.swift */,
-				031CC13A2CA7066F0081D132 /* ContentView.swift */,
-				031CC13C2CA7066F0081D132 /* Item.swift */,
-				031CC13E2CA706700081D132 /* Assets.xcassets */,
+				03E897972CADB31100403E52 /* AppDelegate.swift */,
 				031CC1402CA706700081D132 /* AndysWay.entitlements */,
 				031CC1412CA706700081D132 /* Preview Content */,
 			);
@@ -130,6 +173,76 @@
 				031CC1582CA706700081D132 /* AndysWayUITestsLaunchTests.swift */,
 			);
 			path = AndysWayUITests;
+			sourceTree = "<group>";
+		};
+		034C66272CAD79CB0051B8E9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				03F55B302CCC1C4000674DEF /* NetworkErrors.swift */,
+				034C66322CAD8E240051B8E9 /* Environment.swift */,
+				034C66302CAD8CBF0051B8E9 /* ResourceEndPoint.swift */,
+				03E897A02CADC2E700403E52 /* LoginEndPoint.swift */,
+				03F55AF62CCC143600674DEF /* MarkersEndPoint.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		034C66282CAD79DA0051B8E9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03B27CA22CD07F8F0004DA73 /* AddMarkerView.swift */,
+				036269262CEBE5CD005AD3F1 /* FilterMarkersView.swift */,
+				03B27CA02CD00F9C0004DA73 /* MarkerView.swift */,
+				03F55A892CCADDEF00674DEF /* HomeView.swift */,
+				031CC13A2CA7066F0081D132 /* LoginView.swift */,
+				03F55A8B2CCADFB700674DEF /* MapView.swift */,
+				03F55A8D2CCADFE000674DEF /* ProfileView.swift */,
+				03F55A872CCADBF400674DEF /* TabBarView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		034C66292CAD79E20051B8E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				03F55B322CCC1C8C00674DEF /* User.swift */,
+				03F55B342CCC1CA300674DEF /* MyMarker.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		034C662A2CAD7F7A0051B8E9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		034C662D2CAD84350051B8E9 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				031CC13E2CA706700081D132 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		03E8979A2CADB91300403E52 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				03E8979E2CADC2A100403E52 /* LoginViewModel.swift */,
+				03F55B2C2CCC18D200674DEF /* HomeViewModel.swift */,
+				03F55AF82CCC161100674DEF /* MapViewModel.swift */,
+				03F55B2E2CCC18DF00674DEF /* ProfileViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		03F55AF32CCBE37800674DEF /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				03F55AF42CCBE39200674DEF /* LocationManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +375,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				031CC13B2CA7066F0081D132 /* ContentView.swift in Sources */,
-				031CC13D2CA7066F0081D132 /* Item.swift in Sources */,
+				03F55A8A2CCADDF200674DEF /* HomeView.swift in Sources */,
+				03E897982CADB31100403E52 /* AppDelegate.swift in Sources */,
+				031CC13B2CA7066F0081D132 /* LoginView.swift in Sources */,
+				03F55B352CCC1CA300674DEF /* MyMarker.swift in Sources */,
+				03F55A882CCADC2A00674DEF /* TabBarView.swift in Sources */,
+				034C66312CAD8CBF0051B8E9 /* ResourceEndPoint.swift in Sources */,
 				031CC1392CA7066F0081D132 /* AndysWayApp.swift in Sources */,
+				03B27CA32CD07F920004DA73 /* AddMarkerView.swift in Sources */,
+				03F55B312CCC1C4B00674DEF /* NetworkErrors.swift in Sources */,
+				03B27CA12CD00FA20004DA73 /* MarkerView.swift in Sources */,
+				03F55AF72CCC143600674DEF /* MarkersEndPoint.swift in Sources */,
+				034C66332CAD8E240051B8E9 /* Environment.swift in Sources */,
+				03F55A8C2CCADFBA00674DEF /* MapView.swift in Sources */,
+				03F55AF52CCBE39200674DEF /* LocationManager.swift in Sources */,
+				03E8979F2CADC2A600403E52 /* LoginViewModel.swift in Sources */,
+				03F55AF92CCC161100674DEF /* MapViewModel.swift in Sources */,
+				036269272CEBE5CD005AD3F1 /* FilterMarkersView.swift in Sources */,
+				03F55A8E2CCADFE300674DEF /* ProfileView.swift in Sources */,
+				03F55B332CCC1C9000674DEF /* User.swift in Sources */,
+				03F55B2D2CCC18D600674DEF /* HomeViewModel.swift in Sources */,
+				03F55B2F2CCC18DF00674DEF /* ProfileViewModel.swift in Sources */,
+				03E897A12CADC2F000403E52 /* LoginEndPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +560,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Used for adding map markers.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -438,7 +571,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -446,7 +579,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.haberdashery1234.AndysWay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -466,6 +600,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Used for adding map markers.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -476,7 +611,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -484,7 +619,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.haberdashery1234.AndysWay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
