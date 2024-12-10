@@ -15,12 +15,11 @@ struct AndysWayApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
-    @StateObject var loginViewModel = LoginViewModel()
+    @StateObject var profileViewModel = ProfileViewModel()
     
     var body: some Scene {
         WindowGroup {
-            LoginView()
-                .environmentObject(loginViewModel)
+            TabBarView()
         }
     }
 }
