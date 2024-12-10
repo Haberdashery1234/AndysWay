@@ -7,8 +7,11 @@
 
 import Foundation
 
+struct MarkersResponse: Decodable {
+}
+
 struct MarkersEndPoint: ResourceEndPoint {
-    typealias Response = LoginResponse
+    typealias Response = MarkersResponse
     
     static var path: String = "/markers"
     
@@ -34,8 +37,8 @@ struct MarkersEndPoint: ResourceEndPoint {
             }
             
             do {
-                let markers = try? JSONDecoder().decode([MyMarker].self, from: data)
-                completion(.success(markers ?? []))
+                let markers = try JSONDecoder().decode([MyMarker].self, from: data)
+                completion(.success(markers))
             } catch {
                 completion(.failure(error))
             }

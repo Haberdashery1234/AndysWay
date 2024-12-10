@@ -14,8 +14,6 @@ enum HTTPMethod: String {
 }
 
 protocol ResourceEndPoint {
-    associatedtype Response: Decodable
-    
     static var path: String { get }
     static var availableHTTPMethods: [HTTPMethod] { get }
 }
